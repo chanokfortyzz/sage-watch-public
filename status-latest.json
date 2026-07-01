@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-07-01T22:41:27+08:00",
+  "actionable": true,
+  "severity": "medium",
+  "changed": [
+    "blocked tasks: 0 -> 1",
+    "human-review tasks: 0 -> 3",
+    "queue pollution candidates: 0 -> 3",
+    "02-MAC_TASK_QUEUE.md: - 0 -> 3",
+    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: done 0 -> 4",
+    "02-MAC_TASK_QUEUE.md: queued 0 -> 13",
+    "CLAUDE_WORK_QUEUE.md: DONE 0 -> 2",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 0 -> 7",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
+    "TASK_PACKETS.md: DONE 0 -> 4",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 0 -> 7"
+  ],
+  "why_it_matters": [
+    "blocked tasks need human review before automation continues",
+    "non-DONE review states are waiting on Codex or user decision",
+    "raw queue still has tasks already represented as DONE packets",
+    "trace anomalies may indicate stalled local-worker routing"
+  ],
+  "safest_next_action": [
+    "review private Sage queues locally; do not execute high-risk tasks from the public summary"
+  ],
+  "evidence": [
+    "blocked tasks: 0 -> 1",
+    "human-review tasks: 0 -> 3",
+    "queue pollution candidates: 0 -> 3",
+    "02-MAC_TASK_QUEUE.md: - 0 -> 3",
+    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: done 0 -> 4",
+    "02-MAC_TASK_QUEUE.md: queued 0 -> 13",
+    "CLAUDE_WORK_QUEUE.md: DONE 0 -> 2",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 0 -> 7",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
+    "TASK_PACKETS.md: DONE 0 -> 4",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 0 -> 7"
+  ],
+  "source_files": [
+    "SAGE_STATUS.md",
+    "TASK_PACKETS.md",
+    "CLAUDE_WORK_QUEUE.md",
+    "CODEX_REVIEW_QUEUE.md",
+    "local-worker-task-trace.jsonl",
+    "02-MAC_TASK_QUEUE.md",
+    "03-MAC_SESSION_LOG.md",
+    "04-MAC_OUTBOX.md"
+  ],
+  "summary": {
+    "counts": {
+      "-": 3,
+      "DONE": 6,
+      "READY_FOR_CLAUDE": 14,
+      "READY_FOR_CODEX_REVIEW": 6,
+      "blocked": 1,
+      "done": 4,
+      "queued": 13
+    },
+    "risks": {
+      "-": 6,
+      "low": 29,
+      "medium": 12
+    },
+    "by_file_status": {
+      "02-MAC_TASK_QUEUE.md": {
+        "-": 3,
+        "blocked": 1,
+        "done": 4,
+        "queued": 13
+      },
+      "CLAUDE_WORK_QUEUE.md": {
+        "DONE": 2,
+        "READY_FOR_CLAUDE": 7
+      },
+      "CODEX_REVIEW_QUEUE.md": {
+        "READY_FOR_CODEX_REVIEW": 3
+      },
+      "TASK_PACKETS.md": {
+        "DONE": 4,
+        "READY_FOR_CLAUDE": 7,
+        "READY_FOR_CODEX_REVIEW": 3
+      }
+    },
+    "actionable_count": 3,
+    "blocked_count": 1,
+    "high_risk_count": 0,
+    "decision_count": 3,
+    "trace_event_counts": {
+      "local-worker-finished": 2,
+      "local-worker-noop": 17,
+      "local-worker-offline": 1,
+      "task-claimed": 3,
+      "task-pack-run": 21,
+      "task-packaged": 8
+    },
+    "trace_recent_event_types": [
+      "task-pack-run",
+      "local-worker-noop",
+      "task-pack-run",
+      "local-worker-noop",
+      "task-pack-run",
+      "local-worker-noop",
+      "task-pack-run",
+      "local-worker-noop",
+      "task-pack-run",
+      "local-worker-noop",
+      "task-pack-run",
+      "local-worker-noop"
+    ],
+    "trace_anomalies": [
+      "local-worker-noop",
+      "local-worker-offline"
+    ],
+    "queue_pollution_count": 3
+  },
+  "redaction": "summary_only_no_raw_queue_content"
+}
