@@ -1,23 +1,24 @@
 {
-  "generated_at": "2026-07-01T22:41:27+08:00",
+  "generated_at": "2026-07-02T20:31:03+08:00",
   "actionable": true,
-  "severity": "medium",
+  "severity": "high",
   "changed": [
-    "blocked tasks: 0 -> 1",
-    "human-review tasks: 0 -> 3",
-    "queue pollution candidates: 0 -> 3",
-    "02-MAC_TASK_QUEUE.md: - 0 -> 3",
-    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
-    "02-MAC_TASK_QUEUE.md: done 0 -> 4",
-    "02-MAC_TASK_QUEUE.md: queued 0 -> 13",
-    "CLAUDE_WORK_QUEUE.md: DONE 0 -> 2",
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 0 -> 7",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
-    "TASK_PACKETS.md: DONE 0 -> 4",
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 0 -> 7"
+    "blocked tasks: 1 -> 2",
+    "high/critical risk tasks: 0 -> 2",
+    "human-review tasks: 3 -> 4",
+    "queue pollution candidates: 3 -> 8",
+    "02-MAC_TASK_QUEUE.md: queued 13 -> 15",
+    "CLAUDE_WORK_QUEUE.md: DONE 2 -> 8",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 7 -> 3",
+    "CODEX_REVIEW_QUEUE.md: - 0 -> 4",
+    "TASK_PACKETS.md: BLOCKED_USER_CONFIRM 0 -> 1",
+    "TASK_PACKETS.md: DONE 4 -> 12",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 7 -> 3",
+    "status regression: CODEX_REVIEW_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> -"
   ],
   "why_it_matters": [
     "blocked tasks need human review before automation continues",
+    "high/critical tasks must not auto-dispatch",
     "non-DONE review states are waiting on Codex or user decision",
     "raw queue still has tasks already represented as DONE packets",
     "trace anomalies may indicate stalled local-worker routing"
@@ -26,18 +27,18 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "blocked tasks: 0 -> 1",
-    "human-review tasks: 0 -> 3",
-    "queue pollution candidates: 0 -> 3",
-    "02-MAC_TASK_QUEUE.md: - 0 -> 3",
-    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
-    "02-MAC_TASK_QUEUE.md: done 0 -> 4",
-    "02-MAC_TASK_QUEUE.md: queued 0 -> 13",
-    "CLAUDE_WORK_QUEUE.md: DONE 0 -> 2",
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 0 -> 7",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
-    "TASK_PACKETS.md: DONE 0 -> 4",
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 0 -> 7"
+    "blocked tasks: 1 -> 2",
+    "high/critical risk tasks: 0 -> 2",
+    "human-review tasks: 3 -> 4",
+    "queue pollution candidates: 3 -> 8",
+    "02-MAC_TASK_QUEUE.md: queued 13 -> 15",
+    "CLAUDE_WORK_QUEUE.md: DONE 2 -> 8",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 7 -> 3",
+    "CODEX_REVIEW_QUEUE.md: - 0 -> 4",
+    "TASK_PACKETS.md: BLOCKED_USER_CONFIRM 0 -> 1",
+    "TASK_PACKETS.md: DONE 4 -> 12",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 7 -> 3",
+    "status regression: CODEX_REVIEW_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> -"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -51,17 +52,19 @@
   ],
   "summary": {
     "counts": {
-      "-": 3,
-      "DONE": 6,
-      "READY_FOR_CLAUDE": 14,
-      "READY_FOR_CODEX_REVIEW": 6,
+      "-": 7,
+      "BLOCKED_USER_CONFIRM": 1,
+      "DONE": 20,
+      "READY_FOR_CLAUDE": 6,
+      "READY_FOR_CODEX_REVIEW": 3,
       "blocked": 1,
       "done": 4,
-      "queued": 13
+      "queued": 15
     },
     "risks": {
-      "-": 6,
-      "low": 29,
+      "-": 10,
+      "high": 2,
+      "low": 33,
       "medium": 12
     },
     "by_file_status": {
@@ -69,52 +72,55 @@
         "-": 3,
         "blocked": 1,
         "done": 4,
-        "queued": 13
+        "queued": 15
       },
       "CLAUDE_WORK_QUEUE.md": {
-        "DONE": 2,
-        "READY_FOR_CLAUDE": 7
+        "DONE": 8,
+        "READY_FOR_CLAUDE": 3
       },
       "CODEX_REVIEW_QUEUE.md": {
-        "READY_FOR_CODEX_REVIEW": 3
+        "-": 4
       },
       "TASK_PACKETS.md": {
-        "DONE": 4,
-        "READY_FOR_CLAUDE": 7,
+        "BLOCKED_USER_CONFIRM": 1,
+        "DONE": 12,
+        "READY_FOR_CLAUDE": 3,
         "READY_FOR_CODEX_REVIEW": 3
       }
     },
-    "actionable_count": 3,
-    "blocked_count": 1,
-    "high_risk_count": 0,
-    "decision_count": 3,
+    "actionable_count": 5,
+    "blocked_count": 2,
+    "high_risk_count": 2,
+    "decision_count": 4,
     "trace_event_counts": {
       "local-worker-finished": 2,
-      "local-worker-noop": 17,
+      "local-worker-noop": 40,
       "local-worker-offline": 1,
-      "task-claimed": 3,
-      "task-pack-run": 21,
-      "task-packaged": 8
+      "route-decided": 1,
+      "task-claimed": 4,
+      "task-pack-run": 47,
+      "task-packaged": 9,
+      "tick-end": 21
     },
     "trace_recent_event_types": [
       "task-pack-run",
       "local-worker-noop",
+      "tick-end",
       "task-pack-run",
       "local-worker-noop",
+      "tick-end",
       "task-pack-run",
       "local-worker-noop",
+      "tick-end",
       "task-pack-run",
       "local-worker-noop",
-      "task-pack-run",
-      "local-worker-noop",
-      "task-pack-run",
-      "local-worker-noop"
+      "tick-end"
     ],
     "trace_anomalies": [
       "local-worker-noop",
       "local-worker-offline"
     ],
-    "queue_pollution_count": 3
+    "queue_pollution_count": 8
   },
   "redaction": "summary_only_no_raw_queue_content"
 }
