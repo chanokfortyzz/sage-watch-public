@@ -1,44 +1,33 @@
 {
-  "generated_at": "2026-07-02T20:31:03+08:00",
+  "generated_at": "2026-07-02T23:22:55+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "blocked tasks: 1 -> 2",
-    "high/critical risk tasks: 0 -> 2",
-    "human-review tasks: 3 -> 4",
-    "queue pollution candidates: 3 -> 8",
-    "02-MAC_TASK_QUEUE.md: queued 13 -> 15",
-    "CLAUDE_WORK_QUEUE.md: DONE 2 -> 8",
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 7 -> 3",
-    "CODEX_REVIEW_QUEUE.md: - 0 -> 4",
-    "TASK_PACKETS.md: BLOCKED_USER_CONFIRM 0 -> 1",
-    "TASK_PACKETS.md: DONE 4 -> 12",
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 7 -> 3",
-    "status regression: CODEX_REVIEW_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> -"
+    "high/critical risk tasks: 2 -> 3",
+    "human-review tasks: 4 -> 5",
+    "queue pollution candidates: 8 -> 0",
+    "02-MAC_TASK_QUEUE.md: - 3 -> 2",
+    "02-MAC_TASK_QUEUE.md: BLOCKED_USER_CONFIRM 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: queued 15 -> 6"
   ],
   "why_it_matters": [
     "blocked tasks need human review before automation continues",
     "high/critical tasks must not auto-dispatch",
     "non-DONE review states are waiting on Codex or user decision",
-    "raw queue still has tasks already represented as DONE packets",
     "trace anomalies may indicate stalled local-worker routing"
   ],
   "safest_next_action": [
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "blocked tasks: 1 -> 2",
-    "high/critical risk tasks: 0 -> 2",
-    "human-review tasks: 3 -> 4",
-    "queue pollution candidates: 3 -> 8",
-    "02-MAC_TASK_QUEUE.md: queued 13 -> 15",
-    "CLAUDE_WORK_QUEUE.md: DONE 2 -> 8",
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 7 -> 3",
-    "CODEX_REVIEW_QUEUE.md: - 0 -> 4",
-    "TASK_PACKETS.md: BLOCKED_USER_CONFIRM 0 -> 1",
-    "TASK_PACKETS.md: DONE 4 -> 12",
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 7 -> 3",
-    "status regression: CODEX_REVIEW_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> -"
+    "high/critical risk tasks: 2 -> 3",
+    "human-review tasks: 4 -> 5",
+    "queue pollution candidates: 8 -> 0",
+    "02-MAC_TASK_QUEUE.md: - 3 -> 2",
+    "02-MAC_TASK_QUEUE.md: BLOCKED_USER_CONFIRM 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: queued 15 -> 6"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -52,27 +41,27 @@
   ],
   "summary": {
     "counts": {
-      "-": 7,
-      "BLOCKED_USER_CONFIRM": 1,
+      "-": 6,
+      "BLOCKED_USER_CONFIRM": 2,
       "DONE": 20,
       "READY_FOR_CLAUDE": 6,
-      "READY_FOR_CODEX_REVIEW": 3,
-      "blocked": 1,
+      "READY_FOR_CODEX_REVIEW": 4,
       "done": 4,
-      "queued": 15
+      "queued": 6
     },
     "risks": {
-      "-": 10,
-      "high": 2,
-      "low": 33,
+      "-": 9,
+      "high": 3,
+      "low": 24,
       "medium": 12
     },
     "by_file_status": {
       "02-MAC_TASK_QUEUE.md": {
-        "-": 3,
-        "blocked": 1,
+        "-": 2,
+        "BLOCKED_USER_CONFIRM": 1,
+        "READY_FOR_CODEX_REVIEW": 1,
         "done": 4,
-        "queued": 15
+        "queued": 6
       },
       "CLAUDE_WORK_QUEUE.md": {
         "DONE": 8,
@@ -88,10 +77,10 @@
         "READY_FOR_CODEX_REVIEW": 3
       }
     },
-    "actionable_count": 5,
+    "actionable_count": 6,
     "blocked_count": 2,
-    "high_risk_count": 2,
-    "decision_count": 4,
+    "high_risk_count": 3,
+    "decision_count": 5,
     "trace_event_counts": {
       "local-worker-finished": 2,
       "local-worker-noop": 40,
@@ -120,7 +109,7 @@
       "local-worker-noop",
       "local-worker-offline"
     ],
-    "queue_pollution_count": 8
+    "queue_pollution_count": 0
   },
   "redaction": "summary_only_no_raw_queue_content"
 }
