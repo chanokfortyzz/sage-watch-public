@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-07-02T23:25:57+08:00",
+  "generated_at": "2026-07-02T23:43:32+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "CODEX_REVIEW_QUEUE.md: BLOCKED_USER_CONFIRM 0 -> 1",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
-    "status regression: CODEX_REVIEW_QUEUE.md TASK-TREK-AI-PLANNER-DEPLOY - -> BLOCKED_USER_CONFIRM",
-    "status regression cleared: TASK-003",
-    "status regression cleared: TASK-016",
-    "status regression cleared: TASK-018"
+    "TASK_PACKETS.md: BLOCKED_NETWORK_TRANSFER 0 -> 1"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -22,12 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "CODEX_REVIEW_QUEUE.md: BLOCKED_USER_CONFIRM 0 -> 1",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 0 -> 3",
-    "status regression: CODEX_REVIEW_QUEUE.md TASK-TREK-AI-PLANNER-DEPLOY - -> BLOCKED_USER_CONFIRM",
-    "status regression cleared: TASK-003",
-    "status regression cleared: TASK-016",
-    "status regression cleared: TASK-018"
+    "TASK_PACKETS.md: BLOCKED_NETWORK_TRANSFER 0 -> 1"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -42,7 +32,8 @@
   "summary": {
     "counts": {
       "-": 2,
-      "BLOCKED_USER_CONFIRM": 3,
+      "BLOCKED_NETWORK_TRANSFER": 1,
+      "BLOCKED_USER_CONFIRM": 2,
       "DONE": 20,
       "READY_FOR_CLAUDE": 6,
       "READY_FOR_CODEX_REVIEW": 7,
@@ -72,7 +63,7 @@
         "READY_FOR_CODEX_REVIEW": 3
       },
       "TASK_PACKETS.md": {
-        "BLOCKED_USER_CONFIRM": 1,
+        "BLOCKED_NETWORK_TRANSFER": 1,
         "DONE": 12,
         "READY_FOR_CLAUDE": 3,
         "READY_FOR_CODEX_REVIEW": 3
