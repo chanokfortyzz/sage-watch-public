@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-03T10:48:04+08:00",
+  "generated_at": "2026-07-03T10:51:39+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3"
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3"
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -35,7 +35,7 @@
       "BLOCKED_USER_CONFIRM": 1,
       "CLAIMED_BY_CLAUDE": 2,
       "DONE": 21,
-      "READY_FOR_CLAUDE": 5,
+      "READY_FOR_CLAUDE": 6,
       "READY_FOR_CODEX_REVIEW": 7,
       "done": 4,
       "queued": 6
@@ -43,7 +43,7 @@
     "risks": {
       "-": 5,
       "high": 3,
-      "low": 25,
+      "low": 26,
       "medium": 15
     },
     "by_file_status": {
@@ -57,7 +57,7 @@
       "CLAUDE_WORK_QUEUE.md": {
         "CLAIMED_BY_CLAUDE": 1,
         "DONE": 8,
-        "READY_FOR_CLAUDE": 2
+        "READY_FOR_CLAUDE": 3
       },
       "CODEX_REVIEW_QUEUE.md": {
         "READY_FOR_CODEX_REVIEW": 3
