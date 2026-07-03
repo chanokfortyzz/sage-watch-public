@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-03T00:17:46+08:00",
+  "generated_at": "2026-07-03T10:33:37+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "TASK_PACKETS.md: DONE 12 -> 13",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 4 -> 3",
-    "status regression detected: TASK-TREK-AI-PLANNER-DEPLOY CODEX_REVIEW_QUEUE.md READY_FOR_CODEX_REVIEW"
+    "human-review tasks: 5 -> 4",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 3",
+    "status regression cleared: TASK-TREK-AI-PLANNER-DEPLOY"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -19,9 +19,9 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "TASK_PACKETS.md: DONE 12 -> 13",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 4 -> 3",
-    "status regression detected: TASK-TREK-AI-PLANNER-DEPLOY CODEX_REVIEW_QUEUE.md READY_FOR_CODEX_REVIEW"
+    "human-review tasks: 5 -> 4",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 3",
+    "status regression cleared: TASK-TREK-AI-PLANNER-DEPLOY"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -40,13 +40,13 @@
       "CLAIMED_BY_CLAUDE": 2,
       "DONE": 21,
       "READY_FOR_CLAUDE": 4,
-      "READY_FOR_CODEX_REVIEW": 8,
+      "READY_FOR_CODEX_REVIEW": 7,
       "done": 4,
       "queued": 6
     },
     "risks": {
       "-": 5,
-      "high": 4,
+      "high": 3,
       "low": 24,
       "medium": 15
     },
@@ -64,7 +64,7 @@
         "READY_FOR_CLAUDE": 2
       },
       "CODEX_REVIEW_QUEUE.md": {
-        "READY_FOR_CODEX_REVIEW": 4
+        "READY_FOR_CODEX_REVIEW": 3
       },
       "TASK_PACKETS.md": {
         "CLAIMED_BY_CLAUDE": 1,
@@ -76,7 +76,7 @@
     "actionable_count": 6,
     "blocked_count": 1,
     "high_risk_count": 3,
-    "decision_count": 5,
+    "decision_count": 4,
     "trace_event_counts": {
       "local-worker-finished": 2,
       "local-worker-noop": 40,
@@ -85,10 +85,10 @@
       "task-claimed": 5,
       "task-pack-run": 48,
       "task-packaged": 9,
+      "task-reviewed": 1,
       "tick-end": 21
     },
     "trace_recent_event_types": [
-      "tick-end",
       "task-pack-run",
       "local-worker-noop",
       "tick-end",
@@ -99,7 +99,8 @@
       "local-worker-noop",
       "tick-end",
       "task-pack-run",
-      "task-claimed"
+      "task-claimed",
+      "task-reviewed"
     ],
     "trace_anomalies": [
       "local-worker-noop",
@@ -107,8 +108,7 @@
     ],
     "queue_pollution_count": 0,
     "status_regressions": [
-      "TASK-SAGE-GLASSEXPLORER-001 TASK_PACKETS.md CLAIMED_BY_CLAUDE",
-      "TASK-TREK-AI-PLANNER-DEPLOY CODEX_REVIEW_QUEUE.md READY_FOR_CODEX_REVIEW"
+      "TASK-SAGE-GLASSEXPLORER-001 TASK_PACKETS.md CLAIMED_BY_CLAUDE"
     ]
   },
   "redaction": "summary_only_no_raw_queue_content"
