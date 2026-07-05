@@ -1,9 +1,18 @@
 {
-  "generated_at": "2026-07-03T10:51:39+08:00",
+  "generated_at": "2026-07-05T15:04:23+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3"
+    "actionable items: 6 -> 7",
+    "human-review tasks: 4 -> 5",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 3 -> 2",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 3 -> 4",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 3 -> 2",
+    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 3 -> 4",
+    "status regression: TASK_PACKETS.md TASK-AIWS-20260703-104458 READY_FOR_CLAUDE -> CLAIMED_BY_CLAUDE",
+    "status regression: CLAUDE_WORK_QUEUE.md TASK-AIWS-20260703-104458 READY_FOR_CLAUDE -> CLAIMED_BY_CLAUDE",
+    "status regression cleared: TASK-SAGE-GLASSEXPLORER-001",
+    "trace result: task-claimed 5 -> 6"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +26,16 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3"
+    "actionable items: 6 -> 7",
+    "human-review tasks: 4 -> 5",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 3 -> 2",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 3 -> 4",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 3 -> 2",
+    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 3 -> 4",
+    "status regression: TASK_PACKETS.md TASK-AIWS-20260703-104458 READY_FOR_CLAUDE -> CLAIMED_BY_CLAUDE",
+    "status regression: CLAUDE_WORK_QUEUE.md TASK-AIWS-20260703-104458 READY_FOR_CLAUDE -> CLAIMED_BY_CLAUDE",
+    "status regression cleared: TASK-SAGE-GLASSEXPLORER-001",
+    "trace result: task-claimed 5 -> 6"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -35,8 +53,8 @@
       "BLOCKED_USER_CONFIRM": 1,
       "CLAIMED_BY_CLAUDE": 2,
       "DONE": 21,
-      "READY_FOR_CLAUDE": 6,
-      "READY_FOR_CODEX_REVIEW": 7,
+      "READY_FOR_CLAUDE": 4,
+      "READY_FOR_CODEX_REVIEW": 9,
       "done": 4,
       "queued": 6
     },
@@ -57,55 +75,59 @@
       "CLAUDE_WORK_QUEUE.md": {
         "CLAIMED_BY_CLAUDE": 1,
         "DONE": 8,
-        "READY_FOR_CLAUDE": 3
+        "READY_FOR_CLAUDE": 2
       },
       "CODEX_REVIEW_QUEUE.md": {
-        "READY_FOR_CODEX_REVIEW": 3
+        "READY_FOR_CODEX_REVIEW": 4
       },
       "TASK_PACKETS.md": {
         "CLAIMED_BY_CLAUDE": 1,
         "DONE": 13,
-        "READY_FOR_CLAUDE": 3,
-        "READY_FOR_CODEX_REVIEW": 3
+        "READY_FOR_CLAUDE": 2,
+        "READY_FOR_CODEX_REVIEW": 4
       }
     },
-    "actionable_count": 6,
+    "actionable_count": 7,
     "blocked_count": 1,
     "high_risk_count": 3,
-    "decision_count": 4,
+    "decision_count": 5,
     "trace_event_counts": {
+      "budget-mode": 1,
+      "claim-rejected": 2,
+      "codex-review-needed": 1,
       "local-worker-finished": 2,
       "local-worker-noop": 40,
       "local-worker-offline": 1,
+      "resume-needed": 1,
       "route-decided": 1,
-      "task-claimed": 5,
-      "task-pack-run": 48,
+      "stale-claim": 1,
+      "task-claimed": 6,
+      "task-pack-run": 49,
       "task-packaged": 9,
       "task-reviewed": 1,
-      "tick-end": 21
+      "tick-end": 21,
+      "unknown": 14
     },
     "trace_recent_event_types": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "budget-mode",
+      "stale-claim",
+      "resume-needed",
+      "codex-review-needed",
       "task-pack-run",
-      "local-worker-noop",
-      "tick-end",
-      "task-pack-run",
-      "local-worker-noop",
-      "tick-end",
-      "task-pack-run",
-      "local-worker-noop",
-      "tick-end",
-      "task-pack-run",
-      "task-claimed",
-      "task-reviewed"
+      "claim-rejected",
+      "claim-rejected",
+      "task-claimed"
     ],
     "trace_anomalies": [
       "local-worker-noop",
       "local-worker-offline"
     ],
     "queue_pollution_count": 0,
-    "status_regressions": [
-      "TASK-SAGE-GLASSEXPLORER-001 TASK_PACKETS.md CLAIMED_BY_CLAUDE"
-    ]
+    "status_regressions": []
   },
   "redaction": "summary_only_no_raw_queue_content"
 }
