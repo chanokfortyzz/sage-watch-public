@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-07-06T09:45:45+08:00",
+  "generated_at": "2026-07-06T10:39:14+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "actionable items: 7 -> 8",
-    "high/critical risk tasks: 3 -> 4",
-    "human-review tasks: 5 -> 6",
-    "CODEX_REVIEW_QUEUE.md: NEED_USER_CONFIRM 0 -> 1",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 4 -> 5",
-    "status regression detected: TASK-NAS-VPS-WEEKLY-20260706 CODEX_REVIEW_QUEUE.md NEED_USER_CONFIRM"
+    "actionable items: 8 -> 9",
+    "human-review tasks: 6 -> 7",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 6",
+    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 5 -> 6",
+    "status regression cleared: TASK-NAS-VPS-WEEKLY-20260706"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -22,12 +21,11 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "actionable items: 7 -> 8",
-    "high/critical risk tasks: 3 -> 4",
-    "human-review tasks: 5 -> 6",
-    "CODEX_REVIEW_QUEUE.md: NEED_USER_CONFIRM 0 -> 1",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 4 -> 5",
-    "status regression detected: TASK-NAS-VPS-WEEKLY-20260706 CODEX_REVIEW_QUEUE.md NEED_USER_CONFIRM"
+    "actionable items: 8 -> 9",
+    "human-review tasks: 6 -> 7",
+    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 6",
+    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 5 -> 6",
+    "status regression cleared: TASK-NAS-VPS-WEEKLY-20260706"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -43,11 +41,9 @@
     "counts": {
       "-": 2,
       "BLOCKED_USER_CONFIRM": 1,
-      "CLAIMED_BY_CLAUDE": 2,
       "DONE": 21,
-      "NEED_USER_CONFIRM": 1,
       "READY_FOR_CLAUDE": 4,
-      "READY_FOR_CODEX_REVIEW": 10,
+      "READY_FOR_CODEX_REVIEW": 13,
       "done": 4,
       "queued": 6
     },
@@ -66,64 +62,59 @@
         "queued": 6
       },
       "CLAUDE_WORK_QUEUE.md": {
-        "CLAIMED_BY_CLAUDE": 1,
         "DONE": 8,
         "READY_FOR_CLAUDE": 2
       },
       "CODEX_REVIEW_QUEUE.md": {
-        "NEED_USER_CONFIRM": 1,
-        "READY_FOR_CODEX_REVIEW": 4
+        "READY_FOR_CODEX_REVIEW": 6
       },
       "TASK_PACKETS.md": {
-        "CLAIMED_BY_CLAUDE": 1,
         "DONE": 13,
         "READY_FOR_CLAUDE": 2,
-        "READY_FOR_CODEX_REVIEW": 5
+        "READY_FOR_CODEX_REVIEW": 6
       }
     },
-    "actionable_count": 8,
+    "actionable_count": 9,
     "blocked_count": 1,
     "high_risk_count": 4,
-    "decision_count": 6,
+    "decision_count": 7,
     "trace_event_counts": {
       "budget-mode": 1,
-      "claim-rejected": 6,
-      "codex-review-needed": 1,
+      "claim-rejected": 8,
+      "codex-review-needed": 2,
       "local-worker-finished": 2,
       "local-worker-noop": 40,
       "local-worker-offline": 1,
-      "resume-needed": 1,
+      "resume-needed": 2,
       "route-decided": 1,
-      "stale-claim": 1,
+      "stale-claim": 2,
       "task-claimed": 6,
-      "task-pack-run": 51,
+      "task-pack-run": 52,
       "task-packaged": 9,
       "task-reviewed": 1,
       "tick-end": 21,
-      "unknown": 24
+      "unknown": 25
     },
     "trace_recent_event_types": [
       "unknown",
       "unknown",
       "unknown",
       "unknown",
+      "unknown",
+      "unknown",
+      "stale-claim",
+      "resume-needed",
+      "codex-review-needed",
       "task-pack-run",
       "claim-rejected",
-      "claim-rejected",
-      "unknown",
-      "unknown",
-      "unknown",
-      "unknown",
-      "unknown"
+      "claim-rejected"
     ],
     "trace_anomalies": [
       "local-worker-noop",
       "local-worker-offline"
     ],
     "queue_pollution_count": 0,
-    "status_regressions": [
-      "TASK-NAS-VPS-WEEKLY-20260706 CODEX_REVIEW_QUEUE.md NEED_USER_CONFIRM"
-    ]
+    "status_regressions": []
   },
   "redaction": "summary_only_no_raw_queue_content"
 }
