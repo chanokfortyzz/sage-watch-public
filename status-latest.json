@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-07-06T10:39:14+08:00",
+  "generated_at": "2026-07-10T14:39:19+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "actionable items: 8 -> 9",
-    "human-review tasks: 6 -> 7",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 6",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 5 -> 6",
-    "status regression cleared: TASK-NAS-VPS-WEEKLY-20260706"
+    "trace result: task-packaged 9 -> 8"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -21,11 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "actionable items: 8 -> 9",
-    "human-review tasks: 6 -> 7",
-    "CODEX_REVIEW_QUEUE.md: READY_FOR_CODEX_REVIEW 4 -> 6",
-    "TASK_PACKETS.md: READY_FOR_CODEX_REVIEW 5 -> 6",
-    "status regression cleared: TASK-NAS-VPS-WEEKLY-20260706"
+    "trace result: task-packaged 9 -> 8"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -80,7 +72,7 @@
     "decision_count": 7,
     "trace_event_counts": {
       "budget-mode": 1,
-      "claim-rejected": 8,
+      "claim-rejected": 26,
       "codex-review-needed": 2,
       "local-worker-finished": 2,
       "local-worker-noop": 40,
@@ -89,25 +81,25 @@
       "route-decided": 1,
       "stale-claim": 2,
       "task-claimed": 6,
-      "task-pack-run": 52,
-      "task-packaged": 9,
+      "task-pack-run": 61,
+      "task-packaged": 8,
       "task-reviewed": 1,
       "tick-end": 21,
-      "unknown": 25
+      "unknown": 26
     },
     "trace_recent_event_types": [
-      "unknown",
-      "unknown",
-      "unknown",
-      "unknown",
-      "unknown",
-      "unknown",
-      "stale-claim",
-      "resume-needed",
-      "codex-review-needed",
+      "claim-rejected",
+      "claim-rejected",
       "task-pack-run",
       "claim-rejected",
-      "claim-rejected"
+      "claim-rejected",
+      "task-pack-run",
+      "claim-rejected",
+      "claim-rejected",
+      "task-pack-run",
+      "claim-rejected",
+      "claim-rejected",
+      "unknown"
     ],
     "trace_anomalies": [
       "local-worker-noop",
