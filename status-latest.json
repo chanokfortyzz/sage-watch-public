@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-14T18:54:14+08:00",
+  "generated_at": "2026-07-14T19:05:32+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-packaged 3 -> 2"
+    "trace result: task-claimed 6 -> 5"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-packaged 3 -> 2"
+    "trace result: task-claimed 6 -> 5"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -79,17 +79,17 @@
       "resume-needed": 2,
       "route-decided": 1,
       "stale-claim": 2,
-      "task-claimed": 6,
-      "task-pack-run": 60,
+      "task-claimed": 5,
+      "task-pack-run": 59,
       "task-packaged": 2,
       "task-reviewed": 1,
       "tick-end": 21,
-      "unknown": 34
+      "unknown": 36
     },
     "trace_recent_event_types": [
-      "task-pack-run",
       "claim-rejected",
-      "claim-rejected",
+      "unknown",
+      "unknown",
       "unknown",
       "unknown",
       "unknown",
