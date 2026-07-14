@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-11T01:01:06+08:00",
+  "generated_at": "2026-07-14T18:54:14+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-packaged 5 -> 3"
+    "trace result: task-packaged 3 -> 2"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-packaged 5 -> 3"
+    "trace result: task-packaged 3 -> 2"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -76,20 +76,17 @@
       "codex-review-needed": 2,
       "local-worker-finished": 2,
       "local-worker-noop": 40,
-      "local-worker-offline": 1,
       "resume-needed": 2,
       "route-decided": 1,
       "stale-claim": 2,
       "task-claimed": 6,
       "task-pack-run": 60,
-      "task-packaged": 3,
+      "task-packaged": 2,
       "task-reviewed": 1,
       "tick-end": 21,
-      "unknown": 32
+      "unknown": 34
     },
     "trace_recent_event_types": [
-      "claim-rejected",
-      "claim-rejected",
       "task-pack-run",
       "claim-rejected",
       "claim-rejected",
@@ -99,11 +96,12 @@
       "unknown",
       "unknown",
       "unknown",
+      "unknown",
+      "unknown",
       "unknown"
     ],
     "trace_anomalies": [
-      "local-worker-noop",
-      "local-worker-offline"
+      "local-worker-noop"
     ],
     "queue_pollution_count": 0,
     "status_regressions": []
