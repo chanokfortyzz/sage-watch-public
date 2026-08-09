@@ -1,23 +1,45 @@
 {
-  "generated_at": "2026-08-03T05:58:13+08:00",
+  "generated_at": "2026-08-09T23:49:58+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-claimed 4 -> 3"
+    "actionable items: 9 -> 8",
+    "high/critical risk tasks: 4 -> 3",
+    "human-review tasks: 7 -> 6",
+    "queue pollution candidates: 0 -> 8",
+    "02-MAC_TASK_QUEUE.md: - 2 -> 3",
+    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: queued 6 -> 16",
+    "status regression: 02-MAC_TASK_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> blocked",
+    "status regression detected: TASK-002 02-MAC_TASK_QUEUE.md queued",
+    "status regression detected: TASK-003 02-MAC_TASK_QUEUE.md blocked",
+    "status regression detected: TASK-019 02-MAC_TASK_QUEUE.md queued",
+    "status regression detected: TASK-020 02-MAC_TASK_QUEUE.md queued"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
     "blocked tasks need human review before automation continues",
     "high/critical tasks must not auto-dispatch",
     "non-DONE review states are waiting on Codex or user decision",
-    "trace anomalies may indicate stalled local-worker routing"
+    "raw queue still has tasks already represented as DONE packets"
   ],
   "safest_next_action": [
     "keep auto-router frozen; confirm TREK deploy manually before restoring dispatch",
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-claimed 4 -> 3"
+    "actionable items: 9 -> 8",
+    "high/critical risk tasks: 4 -> 3",
+    "human-review tasks: 7 -> 6",
+    "queue pollution candidates: 0 -> 8",
+    "02-MAC_TASK_QUEUE.md: - 2 -> 3",
+    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
+    "02-MAC_TASK_QUEUE.md: queued 6 -> 16",
+    "status regression: 02-MAC_TASK_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> blocked",
+    "status regression detected: TASK-002 02-MAC_TASK_QUEUE.md queued",
+    "status regression detected: TASK-003 02-MAC_TASK_QUEUE.md blocked",
+    "status regression detected: TASK-019 02-MAC_TASK_QUEUE.md queued",
+    "status regression detected: TASK-020 02-MAC_TASK_QUEUE.md queued"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -31,27 +53,26 @@
   ],
   "summary": {
     "counts": {
-      "-": 2,
-      "BLOCKED_USER_CONFIRM": 1,
+      "-": 3,
       "DONE": 21,
       "READY_FOR_CLAUDE": 4,
-      "READY_FOR_CODEX_REVIEW": 13,
+      "READY_FOR_CODEX_REVIEW": 12,
+      "blocked": 1,
       "done": 4,
-      "queued": 6
+      "queued": 16
     },
     "risks": {
-      "-": 5,
-      "high": 5,
-      "low": 26,
+      "-": 6,
+      "high": 4,
+      "low": 36,
       "medium": 15
     },
     "by_file_status": {
       "02-MAC_TASK_QUEUE.md": {
-        "-": 2,
-        "BLOCKED_USER_CONFIRM": 1,
-        "READY_FOR_CODEX_REVIEW": 1,
+        "-": 3,
+        "blocked": 1,
         "done": 4,
-        "queued": 6
+        "queued": 16
       },
       "CLAUDE_WORK_QUEUE.md": {
         "DONE": 8,
@@ -66,35 +87,35 @@
         "READY_FOR_CODEX_REVIEW": 6
       }
     },
-    "actionable_count": 9,
+    "actionable_count": 8,
     "blocked_count": 1,
-    "high_risk_count": 4,
-    "decision_count": 7,
+    "high_risk_count": 3,
+    "decision_count": 6,
     "trace_event_counts": {
       "budget-mode": 1,
-      "claim-rejected": 28,
+      "claim-rejected": 30,
       "codex-review-needed": 2,
-      "local-worker-blocked": 8,
-      "local-worker-noop": 34,
+      "local-worker-blocked": 28,
+      "local-worker-noop": 15,
       "resume-needed": 2,
       "route-decided": 1,
       "stale-claim": 2,
       "task-claimed": 3,
-      "task-pack-run": 51,
+      "task-pack-run": 34,
       "task-packaged": 1,
       "task-reviewed": 1,
-      "tick-end": 29,
+      "tick-end": 43,
       "unknown": 37
     },
     "trace_recent_event_types": [
-      "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
-      "local-worker-blocked",
-      "tick-end",
+      "task-pack-run",
+      "claim-rejected",
+      "claim-rejected",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
@@ -104,8 +125,19 @@
       "local-worker-blocked",
       "local-worker-noop"
     ],
-    "queue_pollution_count": 0,
-    "status_regressions": []
+    "queue_pollution_count": 8,
+    "status_regressions": [
+      "TASK-002 02-MAC_TASK_QUEUE.md queued",
+      "TASK-003 02-MAC_TASK_QUEUE.md blocked",
+      "TASK-019 02-MAC_TASK_QUEUE.md queued",
+      "TASK-020 02-MAC_TASK_QUEUE.md queued",
+      "TASK-CLAUDE-PSU-HOME-STRUCTURE-001 02-MAC_TASK_QUEUE.md -",
+      "TASK-SAGE-CURSIFY-001 02-MAC_TASK_QUEUE.md queued",
+      "TASK-SAGE-OBSIDIAN-IMPROVE-001 02-MAC_TASK_QUEUE.md queued",
+      "TASK-SAGE-VIBECODING-PROMPTS-001 02-MAC_TASK_QUEUE.md queued",
+      "TASK-TEST-PACKET-LOOP-20260701 02-MAC_TASK_QUEUE.md queued",
+      "TASK-TEST-PACKET-LOOP-20260701B 02-MAC_TASK_QUEUE.md queued"
+    ]
   },
   "redaction": "summary_only_no_raw_queue_content"
 }
