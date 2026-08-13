@@ -1,12 +1,14 @@
 # Sage Watch Public Status
 
-- generated_at: `2026-08-13T23:42:18+08:00`
+- generated_at: `2026-08-13T23:47:26+08:00`
 - actionable: `true`
 - severity: `high`
 - redaction: `summary_only_no_raw_queue_content`
 
 ## Changed
-- trace result: task-claimed 3 -> 2
+- CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3
+- TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3
+- trace result: task-packaged 1 -> 2
 
 ## Why It Matters
 - TREK deploy gate still requires explicit human confirmation
@@ -20,4 +22,6 @@
 - review private Sage queues locally; do not execute high-risk tasks from the public summary
 
 ## Evidence
-- trace result: task-claimed 3 -> 2
+- CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3
+- TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3
+- trace result: task-packaged 1 -> 2

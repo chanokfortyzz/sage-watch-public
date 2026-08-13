@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-08-13T23:42:18+08:00",
+  "generated_at": "2026-08-13T23:47:26+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-claimed 3 -> 2"
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3",
+    "trace result: task-packaged 1 -> 2"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +19,9 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-claimed 3 -> 2"
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 2 -> 3",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 2 -> 3",
+    "trace result: task-packaged 1 -> 2"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -33,7 +37,7 @@
     "counts": {
       "-": 3,
       "DONE": 21,
-      "READY_FOR_CLAUDE": 4,
+      "READY_FOR_CLAUDE": 6,
       "READY_FOR_CODEX_REVIEW": 12,
       "blocked": 1,
       "done": 4,
@@ -42,7 +46,7 @@
     "risks": {
       "-": 6,
       "high": 4,
-      "low": 36,
+      "low": 38,
       "medium": 15
     },
     "by_file_status": {
@@ -54,14 +58,14 @@
       },
       "CLAUDE_WORK_QUEUE.md": {
         "DONE": 8,
-        "READY_FOR_CLAUDE": 2
+        "READY_FOR_CLAUDE": 3
       },
       "CODEX_REVIEW_QUEUE.md": {
         "READY_FOR_CODEX_REVIEW": 6
       },
       "TASK_PACKETS.md": {
         "DONE": 13,
-        "READY_FOR_CLAUDE": 2,
+        "READY_FOR_CLAUDE": 3,
         "READY_FOR_CODEX_REVIEW": 6
       }
     },
@@ -70,34 +74,34 @@
     "high_risk_count": 3,
     "decision_count": 6,
     "trace_event_counts": {
-      "budget-mode": 1,
-      "claim-rejected": 30,
+      "budget-mode": 2,
+      "claim-rejected": 33,
       "codex-review-needed": 2,
-      "local-worker-blocked": 39,
-      "local-worker-noop": 9,
+      "local-worker-blocked": 40,
+      "local-worker-noop": 6,
       "resume-needed": 2,
-      "route-decided": 1,
+      "route-decided": 2,
       "stale-claim": 2,
       "task-claimed": 2,
-      "task-pack-run": 25,
-      "task-packaged": 1,
+      "task-pack-run": 23,
+      "task-packaged": 2,
       "task-reviewed": 1,
-      "tick-end": 48,
+      "tick-end": 46,
       "unknown": 37
     },
     "trace_recent_event_types": [
-      "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
-      "local-worker-blocked",
-      "tick-end",
-      "local-worker-blocked",
-      "tick-end",
-      "local-worker-blocked",
-      "tick-end"
+      "budget-mode",
+      "route-decided",
+      "task-packaged",
+      "task-pack-run",
+      "claim-rejected",
+      "claim-rejected",
+      "claim-rejected"
     ],
     "trace_anomalies": [
       "local-worker-blocked",
