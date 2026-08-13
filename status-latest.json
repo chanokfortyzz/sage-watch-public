@@ -1,20 +1,9 @@
 {
-  "generated_at": "2026-08-09T23:49:58+08:00",
+  "generated_at": "2026-08-13T23:42:18+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "actionable items: 9 -> 8",
-    "high/critical risk tasks: 4 -> 3",
-    "human-review tasks: 7 -> 6",
-    "queue pollution candidates: 0 -> 8",
-    "02-MAC_TASK_QUEUE.md: - 2 -> 3",
-    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
-    "02-MAC_TASK_QUEUE.md: queued 6 -> 16",
-    "status regression: 02-MAC_TASK_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> blocked",
-    "status regression detected: TASK-002 02-MAC_TASK_QUEUE.md queued",
-    "status regression detected: TASK-003 02-MAC_TASK_QUEUE.md blocked",
-    "status regression detected: TASK-019 02-MAC_TASK_QUEUE.md queued",
-    "status regression detected: TASK-020 02-MAC_TASK_QUEUE.md queued"
+    "trace result: task-claimed 3 -> 2"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -28,18 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "actionable items: 9 -> 8",
-    "high/critical risk tasks: 4 -> 3",
-    "human-review tasks: 7 -> 6",
-    "queue pollution candidates: 0 -> 8",
-    "02-MAC_TASK_QUEUE.md: - 2 -> 3",
-    "02-MAC_TASK_QUEUE.md: blocked 0 -> 1",
-    "02-MAC_TASK_QUEUE.md: queued 6 -> 16",
-    "status regression: 02-MAC_TASK_QUEUE.md TASK-003 READY_FOR_CODEX_REVIEW -> blocked",
-    "status regression detected: TASK-002 02-MAC_TASK_QUEUE.md queued",
-    "status regression detected: TASK-003 02-MAC_TASK_QUEUE.md blocked",
-    "status regression detected: TASK-019 02-MAC_TASK_QUEUE.md queued",
-    "status regression detected: TASK-020 02-MAC_TASK_QUEUE.md queued"
+    "trace result: task-claimed 3 -> 2"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -95,27 +73,27 @@
       "budget-mode": 1,
       "claim-rejected": 30,
       "codex-review-needed": 2,
-      "local-worker-blocked": 28,
-      "local-worker-noop": 15,
+      "local-worker-blocked": 39,
+      "local-worker-noop": 9,
       "resume-needed": 2,
       "route-decided": 1,
       "stale-claim": 2,
-      "task-claimed": 3,
-      "task-pack-run": 34,
+      "task-claimed": 2,
+      "task-pack-run": 25,
       "task-packaged": 1,
       "task-reviewed": 1,
-      "tick-end": 43,
+      "tick-end": 48,
       "unknown": 37
     },
     "trace_recent_event_types": [
+      "local-worker-blocked",
+      "tick-end",
+      "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
       "tick-end",
-      "task-pack-run",
-      "claim-rejected",
-      "claim-rejected",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
