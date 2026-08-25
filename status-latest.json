@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-19T02:33:50+08:00",
+  "generated_at": "2026-08-25T09:02:50+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-claimed 2 -> 1"
+    "trace result: task-claimed 1 -> 0"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-claimed 2 -> 1"
+    "trace result: task-claimed 1 -> 0"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -70,23 +70,21 @@
     "high_risk_count": 3,
     "decision_count": 6,
     "trace_event_counts": {
-      "budget-mode": 2,
-      "claim-rejected": 33,
-      "codex-review-needed": 2,
-      "local-worker-blocked": 51,
-      "resume-needed": 2,
+      "budget-mode": 1,
+      "claim-rejected": 31,
+      "codex-review-needed": 1,
+      "local-worker-blocked": 62,
+      "resume-needed": 1,
       "route-decided": 1,
-      "stale-claim": 2,
-      "task-claimed": 1,
-      "task-pack-run": 16,
+      "stale-claim": 1,
+      "task-pack-run": 14,
       "task-packaged": 1,
-      "task-reviewed": 1,
-      "tick-end": 51,
-      "unknown": 37
+      "tick-end": 62,
+      "unknown": 25
     },
     "trace_recent_event_types": [
-      "local-worker-blocked",
       "tick-end",
+      "unknown",
       "local-worker-blocked",
       "tick-end",
       "local-worker-blocked",
