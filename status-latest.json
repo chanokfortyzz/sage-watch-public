@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-27T23:05:52+08:00",
+  "generated_at": "2026-09-16T22:19:29+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "trace result: task-packaged 1 -> 0"
+    "trace anomaly detected: local-worker-noop"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -17,7 +17,7 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "trace result: task-packaged 1 -> 0"
+    "trace anomaly detected: local-worker-noop"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -70,28 +70,29 @@
     "high_risk_count": 3,
     "decision_count": 6,
     "trace_event_counts": {
-      "claim-rejected": 3,
-      "local-worker-blocked": 95,
-      "task-pack-run": 1,
-      "tick-end": 95,
-      "unknown": 6
+      "claim-rejected": 12,
+      "local-worker-blocked": 86,
+      "local-worker-noop": 4,
+      "task-pack-run": 8,
+      "tick-end": 90
     },
     "trace_recent_event_types": [
-      "local-worker-blocked",
+      "task-pack-run",
+      "local-worker-noop",
       "tick-end",
-      "local-worker-blocked",
+      "task-pack-run",
+      "local-worker-noop",
       "tick-end",
-      "local-worker-blocked",
+      "task-pack-run",
+      "local-worker-noop",
       "tick-end",
-      "local-worker-blocked",
-      "tick-end",
-      "local-worker-blocked",
-      "tick-end",
-      "local-worker-blocked",
+      "task-pack-run",
+      "local-worker-noop",
       "tick-end"
     ],
     "trace_anomalies": [
-      "local-worker-blocked"
+      "local-worker-blocked",
+      "local-worker-noop"
     ],
     "queue_pollution_count": 8,
     "status_regressions": [
