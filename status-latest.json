@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-09-16T23:00:49+08:00",
+  "generated_at": "2026-09-17T12:26:25+08:00",
   "actionable": true,
   "severity": "high",
   "changed": [
-    "queue pollution candidates: 8 -> 1",
-    "02-MAC_TASK_QUEUE.md: done 4 -> 12",
-    "02-MAC_TASK_QUEUE.md: queued 16 -> 8",
-    "status regression cleared: TASK-002",
-    "status regression cleared: TASK-019",
-    "status regression cleared: TASK-SAGE-CURSIFY-001",
-    "status regression cleared: TASK-SAGE-OBSIDIAN-IMPROVE-001",
-    "status regression cleared: TASK-SAGE-VIBECODING-PROMPTS-001",
-    "status regression cleared: TASK-TEST-PACKET-LOOP-20260701",
-    "status regression cleared: TASK-TEST-PACKET-LOOP-20260701B"
+    "02-MAC_TASK_QUEUE.md: done 12 -> 13",
+    "02-MAC_TASK_QUEUE.md: queued 8 -> 7",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 3 -> 2",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 3 -> 2"
   ],
   "why_it_matters": [
     "TREK deploy gate still requires explicit human confirmation",
@@ -26,16 +20,10 @@
     "review private Sage queues locally; do not execute high-risk tasks from the public summary"
   ],
   "evidence": [
-    "queue pollution candidates: 8 -> 1",
-    "02-MAC_TASK_QUEUE.md: done 4 -> 12",
-    "02-MAC_TASK_QUEUE.md: queued 16 -> 8",
-    "status regression cleared: TASK-002",
-    "status regression cleared: TASK-019",
-    "status regression cleared: TASK-SAGE-CURSIFY-001",
-    "status regression cleared: TASK-SAGE-OBSIDIAN-IMPROVE-001",
-    "status regression cleared: TASK-SAGE-VIBECODING-PROMPTS-001",
-    "status regression cleared: TASK-TEST-PACKET-LOOP-20260701",
-    "status regression cleared: TASK-TEST-PACKET-LOOP-20260701B"
+    "02-MAC_TASK_QUEUE.md: done 12 -> 13",
+    "02-MAC_TASK_QUEUE.md: queued 8 -> 7",
+    "CLAUDE_WORK_QUEUE.md: READY_FOR_CLAUDE 3 -> 2",
+    "TASK_PACKETS.md: READY_FOR_CLAUDE 3 -> 2"
   ],
   "source_files": [
     "SAGE_STATUS.md",
@@ -51,35 +39,35 @@
     "counts": {
       "-": 3,
       "DONE": 21,
-      "READY_FOR_CLAUDE": 6,
+      "READY_FOR_CLAUDE": 4,
       "READY_FOR_CODEX_REVIEW": 12,
       "blocked": 1,
-      "done": 12,
-      "queued": 8
+      "done": 13,
+      "queued": 7
     },
     "risks": {
       "-": 6,
       "high": 4,
-      "low": 38,
+      "low": 36,
       "medium": 15
     },
     "by_file_status": {
       "02-MAC_TASK_QUEUE.md": {
         "-": 3,
         "blocked": 1,
-        "done": 12,
-        "queued": 8
+        "done": 13,
+        "queued": 7
       },
       "CLAUDE_WORK_QUEUE.md": {
         "DONE": 8,
-        "READY_FOR_CLAUDE": 3
+        "READY_FOR_CLAUDE": 2
       },
       "CODEX_REVIEW_QUEUE.md": {
         "READY_FOR_CODEX_REVIEW": 6
       },
       "TASK_PACKETS.md": {
         "DONE": 13,
-        "READY_FOR_CLAUDE": 3,
+        "READY_FOR_CLAUDE": 2,
         "READY_FOR_CODEX_REVIEW": 6
       }
     },
@@ -88,11 +76,11 @@
     "high_risk_count": 3,
     "decision_count": 6,
     "trace_event_counts": {
-      "claim-rejected": 12,
-      "local-worker-blocked": 75,
-      "local-worker-noop": 11,
-      "task-pack-run": 15,
-      "tick-end": 87
+      "claim-rejected": 9,
+      "local-worker-blocked": 67,
+      "local-worker-noop": 18,
+      "task-pack-run": 21,
+      "tick-end": 85
     },
     "trace_recent_event_types": [
       "task-pack-run",
